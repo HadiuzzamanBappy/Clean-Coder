@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
 :root {
-    --font-sans: 'Inter', sans-serif;
+    --font-sans: 'Poppins', sans-serif;
     --font-mono: 'Fira Code', monospace;
     --radius: 0.5rem;
 
@@ -187,7 +190,7 @@ pre[class*="language-"] {
     flex-grow: 1;
     width: 100%;
     height: 100%;
-    padding: 0.75rem !important;
+    padding: 0.75rem;
     margin: 0;
     border: none;
     background-color: transparent;
@@ -225,12 +228,46 @@ pre[class*="language-"] {
     border-right-color: var(--border) !important;
 }
 
-.toggle-group label {
+.toggle-group{
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
+    margin-left: auto;
+    gap: 1rem;
+    padding: 0.5rem;
+    border: 1px dashed var(--fg);
+    border-radius: 100px;
+}
+
+/* --- Pill Button Toggle CSS --- */
+.pill-toggle {
+    display: inline-block;
     cursor: pointer;
+    user-select: none;
+}
+
+.pill-toggle input[type="checkbox"] {
+    display: none;
+    /* Hide the actual checkbox */
+}
+
+.pill-toggle .label-text {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+
+    /* "Off" state styles */
+    background-color: var(--bg-alt);
+    color: var(--fg);
+    border: 1px solid transparent;
+}
+
+/* "On" state styles */
+.pill-toggle input:checked+.label-text {
+    background-color: rgba(8, 182, 235, 0.1);
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
 #toast {

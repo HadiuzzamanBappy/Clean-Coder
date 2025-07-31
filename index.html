@@ -8,19 +8,15 @@
     <link rel="shortcut icon" href="/res/logo/logo.svg" type="image/x-icon+svg">
 
     <!-- Google Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link href="/res/css/material-symbol-outlined.css" rel="stylesheet" />
     <!-- Prism.js Themes -->
     <link rel="stylesheet" href="/res/css/prism.min.css" id="prism-light-theme">
     <link rel="stylesheet" href="/res/css/prism-okaidia.min.css" id="prism-dark-theme" disabled>
-    <link rel="stylesheet" href="/res/css/prism-line-numbers.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
 
+
+    <!-- Local Css -->
     <link rel="stylesheet" href="/res/css/style.css">
 </head>
 
@@ -59,9 +55,15 @@
             <button class="btn" id="minify-btn"><span class="material-symbols-outlined">compress</span>Minify</button>
             <button class="btn" id="validate-btn"><span
                     class="material-symbols-outlined">task_alt</span>Validate</button>
-            <div class="toggle-group" style="margin-left: auto; display: flex; gap: 1rem;">
-                <label><input type="checkbox" id="line-numbers-toggle" checked><span>Line Numbers</span></label>
-                <label><input type="checkbox" id="word-wrap-toggle"><span>Word Wrap</span></label>
+            <div class="toggle-group">
+                <label class="pill-toggle">
+                    <input type="checkbox" id="line-numbers-toggle" checked>
+                    <span class="label-text">Line Numbers</span>
+                </label>
+                <label class="pill-toggle">
+                    <input type="checkbox" id="word-wrap-toggle">
+                    <span class="label-text">Word Wrap</span>
+                </label>
             </div>
         </div>
 
@@ -106,15 +108,16 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
     <!-- Prettier Standalone and Parsers (from jsDelivr CDN) -->
-    <script src="/res/js/standalone.js"></script>
-    <script src="/res/js/parser-html.js"></script>
-    <script src="/res/js/parser-postcss.js"></script>
-    <script src="/res/js/parser-babel.js"></script>
-    <script src="/res/js/parser-yaml.js"></script>
-    <script src="/res/js/parser-markdown.js"></script>
-    <script src="/res/js/sql-formatter.min.js"></script>
-    <script src="/res/js/vkbeautify.js"></script>
+    <script src="/res/js/parser/standalone.js"></script>
+    <script src="/res/js/parser/parser-html.js"></script>
+    <script src="/res/js/parser/parser-postcss.js"></script>
+    <script src="/res/js/parser/parser-babel.js"></script>
+    <script src="/res/js/parser/parser-yaml.js"></script>
+    <script src="/res/js/parser/parser-markdown.js"></script>
+    <script src="/res/js/parser/sql-formatter.min.js"></script>
+    <script src="/res/js/parser/vkbeautify.js"></script>
 
+    <!-- Local JS -->
     <script src="/res/js/script.js"></script>
 </body>
 

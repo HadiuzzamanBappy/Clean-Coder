@@ -26,6 +26,7 @@ A modern, responsive website offering a suite of free developer tools, including
 
 ## Folder Structure
 
+```
 CleanCoder/
 ├── assets/
 │ ├── css/
@@ -38,7 +39,7 @@ CleanCoder/
 │ └── logo.svg
 ├── index.html
 └── README.md
-
+```
 
 ---
 
